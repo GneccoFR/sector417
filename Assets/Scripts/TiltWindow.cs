@@ -24,6 +24,6 @@ public class TiltWindow : MonoBehaviour
 		float y = Mathf.Clamp((pos.y - halfHeight) / halfHeight, -1f, 1f);
 		mRot = Vector2.Lerp(mRot, new Vector2(x, y), Time.deltaTime * 5f);
 
-		mTrans.localRotation = mStart * Quaternion.Euler(-mRot.y * range.y, mRot.x * range.x, 0f);
+		mTrans.localRotation = mStart * Quaternion.Euler(mRot.y * range.y, -mRot.x * range.x, 0f);
 	}
 }
